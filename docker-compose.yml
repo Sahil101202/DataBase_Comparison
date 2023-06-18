@@ -1,0 +1,80 @@
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+  
+  myadmin:
+    image: phpmyadmin:latest
+    ports:
+      - 8123:80
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+        
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sahil
+      MONGO_INITDB_ROOT_PASSWORD: 101202
+      ME_CONFIG_MONGODB_URL: mongodb://sahil:101202@mongo:27017/
+
+  cassandra:
+    image: cassandra:latest
+    ports:
+      9042:9042
+
+  neo4j_25:
+    image: neo4j:latest
+    ports: 
+      - 7474:7474
+      - 7687:7687
+
+  neo4j_50:
+    image: neo4j:latest
+    ports: 
+      - 7475:7474
+      - 7688:7687
+
+  neo4j_75:
+    image: neo4j:latest
+    ports: 
+      - 7476:7474
+      - 7689:7687
+
+  neo4j_100:
+    image: neo4j:latest
+    ports: 
+      - 7477:7474
+      - 7690:7687
+
+  redis:
+    image: redis:latest
+    ports: 
+      - 6379:6379
+
+  redis50:
+    image: redis:latest
+    ports: 
+      - 6380:6379
+
+  redis75:
+    image: redis:latest
+    ports: 
+      - 6381:6379
+
+  redis100:
+    image: redis:latest
+    ports: 
+      - 6382:6379
+      
+
+  
+
+  
+
+
+    

@@ -1,0 +1,3 @@
+customer_time_taken(1M) : 353.8961892127991
+product_time_taken(1M) : 0.042613983154296875
+delivery_time_taken(1M) : 0.0006330013275146484
